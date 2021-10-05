@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    
+    <title></title>
+    <script src="https://oscar7711.github.io/twittor/otro/jquery-1.9.1.js" type="text/javascript"></script>
+
+    <!-- For the JavaScript APIs for Office, go to https://aka.ms/officejs-overview to learn more. -->
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+
+    <!-- To enable offline debugging using a local reference to Office.js, use: -->
+    <!-- <script src="Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>  -->
+    <!-- <script src="Scripts/Office/1/office.js" type="text/javascript"></script>  -->
+
+    <!--<script src="MessageRead.js" type="text/javascript"></script>-->
+    <script src="https://oscar7711.github.io/twittor/otro/MessageBanner.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        'use strict';
+
+        (function () {
+            Office.onReady(function () {
+                $(document).ready(function () {
+                    loadItemProps(Office.context.mailbox.item);
+                });
+            });
+
+            function loadItemProps(item) {
+                ///$('#item-id').text(item.itemId);
+                ///$('#url').text("https://apps.powerapps.com/play/69cbb400-327e-4760-bc6a-543312a2cf1b?tenantId=d57455e9-c73f-45d7-ad9e-430426491df9&source=portal&screenColor=rgba(0%2C%20176%2C%20240%2C%201)&correoId=" + item.itemId);
+                //document.getElementById("web").src = "https://apps.powerapps.com/play/6b00902e-b305-4fea-9297-f96c5eeb8bbd?tenantId=d57455e9-c73f-45d7-ad9e-430426491df9&source=portal&screenColor=rgba(0%2C%20176%2C%20240%2C%201)&correoId=" + item.itemId;
+                document.getElementById("web").src = "https://apps.powerapps.com/play/69cbb400-327e-4760-bc6a-543312a2cf1b?tenantId=d57455e9-c73f-45d7-ad9e-430426491df9&source=portal&screenColor=rgba(0%2C%20176%2C%20240%2C%201)&correoId=" + item.itemId;
+            } 
+        })();
+
+        function urlF() {
+            //Office.onReady(function () {
+            //    // Office is ready
+            //    $(document).ready(function () {
+            //        // The document is ready
+            //        loadItemProps(Office.context.mailbox.item);
+            //    });
+            //});
+            
+        }
+    </script>
+
+
+    <!-- For the Office UI Fabric, go to https://aka.ms/office-ui-fabric to learn more. -->
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css" />
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css" />
+
+    <!-- To enable the offline use of Office UI Fabric, use: -->
+    <!-- link rel="stylesheet" href="Content/fabric.min.css" -->
+    <!-- link rel="stylesheet" href="Content/fabric.components.min.css" -->
+</head>
+
+<body class="ms-font-m ms-welcome" onload="urlF()">
+    <div class="ms-Fabric content-main">
+        <!--<table class="ms-Table ms-Table--selectable">
+            <tbody>
+                <tr>
+                    <td><strong>Id</strong></td>
+                    <td class="prop-val"><code><label id="item-id"></label></code></td>
+                </tr>
+                <tr>
+                    <td><strong>Id</strong></td>
+                    <td><label id="url"></label></td>
+                </tr>
+            </tbody>
+        </table>-->
+        <iframe width="320" height="568" id="web">
+
+        </iframe>
+    </div>
+</body>
+
+</html>
